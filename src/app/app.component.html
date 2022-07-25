@@ -1,0 +1,30 @@
+<div class="container pt-2">
+    <div class="form-group">
+        <label for="country">Country:</label>
+        <select class="form-control">
+            <option >Select Country</option>
+            <option >India</option>
+            <option >Brasil</option>
+            <option >Portugal</option>
+        </select>
+    </div>
+    <div class="mt-5">
+        <button class="btn btn-primary mr-2" (click)="modalAngular.show()">Open Modal</button>
+        <button class="btn btn-success">Close Modal</button>
+    </div>
+</div>
+
+<app-modal #modalAngular class="modal-demo">
+  <ng-container class="app-modal-header">Demo modal</ng-container>
+  <ng-container class="app-modal-body">
+    <h3>MODAL DIALOG</h3>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.</p>
+  </ng-container>
+  <ng-container class="app-modal-footer">
+    <button type="button" class="button button3" (click)="modalAngular.hide()">Delete</button>
+    <button type="button" class="button button1" (click)="modalAngular.hide()">Save</button>
+    <button type="button" class="button button2" style="float: right;" (click)="modalAngular.hide()">Close
+    </button>
+  </ng-container>
+</app-modal>
